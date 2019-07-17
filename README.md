@@ -3,7 +3,7 @@
 Made this for one of my own projects. This library uses no dynamic memory allocation. So everything is done on the stack. You may want to be careful with multiplying if your numbers are bigger than a megabyte :stuck_out_tongue_winking_eye:
 
 Originally based on the amazing [kokke/tiny-bignum-c](https://github.com/kokke/tiny-bignum-c), but with the following changes:
-- [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm) multiplication algorithm: a **shocking** speed improvement for bigger numbers, O(n^1.585) instead of O(n^2)
+- [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm) multiplication algorithm: a **shocking** speed improvement for bigger numbers
 - Not dependant on on `sscanf` and `sprintf` for hex string conversions
 - Size of big ints is not set at compile time, but rather passed as an argument to all functions
 - Optional use of 64 bit words, big speed improvement if your CPU can do 64→128 multiplications (probably can)
