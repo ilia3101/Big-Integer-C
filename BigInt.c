@@ -11,23 +11,14 @@
 #ifndef BigIntWordSize
     #error Must define BigIntWordSize to be 1, 2, 4
 #elif (BigIntWordSize == 1)
-    /* sprintf format string */
-    #define SPRINTF_FORMAT_STR       "%.02x"
-    #define SSCANF_FORMAT_STR        "%2hhx"
     /* Max value of integer type */
-    #define MAX_VAL                  ((BigInt_tmp_t)0xFF)
+    #define MAX_VAL ((BigInt_tmp_t)0xFF)
 #elif (BigIntWordSize == 2)
-    #define SPRINTF_FORMAT_STR       "%.04x"
-    #define SSCANF_FORMAT_STR        "%4hx"
-    #define MAX_VAL                  ((BigInt_tmp_t)0xFFFF)
+    #define MAX_VAL ((BigInt_tmp_t)0xFFFF)
 #elif (BigIntWordSize == 4)
-    #define SPRINTF_FORMAT_STR       "%.08x"
-    #define SSCANF_FORMAT_STR        "%8x"
-    #define MAX_VAL                  ((BigInt_tmp_t)0xFFFFFFFF)
+    #define MAX_VAL ((BigInt_tmp_t)0xFFFFFFFF)
 #elif (BigIntWordSize == 8)
-    #define SPRINTF_FORMAT_STR       "%.16llx"
-    #define SSCANF_FORMAT_STR        "%16llx"
-    #define MAX_VAL                  ((BigInt_tmp_t)0xFFFFFFFFFFFFFFFF)
+    #define MAX_VAL ((BigInt_tmp_t)0xFFFFFFFFFFFFFFFF)
 #endif
 
 /* Bad macros */
