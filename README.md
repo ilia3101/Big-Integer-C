@@ -1,6 +1,6 @@
 # Small and fast Big Integer library in C
 
-Made this for one of my own projects. No dynamic memory allocation is used. Everything is done on the stack, so you may want to be careful if your numbers are bigger than a megabyte :stuck_out_tongue_winking_eye:
+Made this for one of my own projects. `malloc()` is not used in this library. Everything is done with variables and alloca, so you may want to be careful if your numbers are bigger than a megabyte :stuck_out_tongue_winking_eye:
 
 Based on the amazing [kokke/tiny-bignum-c](https://github.com/kokke/tiny-bignum-c), but with the following changes:
 - [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm) multiplication algorithm: **shocking** speed improvement for bigger numbers
@@ -10,7 +10,7 @@ Based on the amazing [kokke/tiny-bignum-c](https://github.com/kokke/tiny-bignum-
 - Optional use of 64 bit words: nice speed up if your CPU has 64→128 multiplications (it probably does)
 - The add, subtract and multiply functions can take differently sized inputs
 
-If what you want is the fastest library for big numbers, look at [GNU GMP](https://gmplib.org/), but if you want to be in control of your memory, you have come to the right place.
+If what you want is the fastest library for big numbers, look at [GNU GMP](https://gmplib.org/).
 
 Usage example:
 
