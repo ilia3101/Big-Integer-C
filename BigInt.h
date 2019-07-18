@@ -27,8 +27,6 @@
 /* Tokens returned by BigInt_cmp() for value comparison */
 enum { SMALLER = -1, EQUAL = 0, LARGER = 1 };
 
-/* Returns actual number of digits needed for the int */
-
 /* In/out functions */ 
 void BigInt_zero(size_t NumWords, BigInt_t * BigInt);
 void BigInt_from_int(size_t NumWords, BigInt_t * BigInt, BigInt_tmp_t Integer);
