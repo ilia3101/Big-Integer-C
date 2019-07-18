@@ -1,16 +1,3 @@
-/*
-Big number library - arithmetic on multiple-precision unsigned integers.
-This library is an implementation of arithmetic on arbitrarily large integers.
-The difference between this and other implementations, is that the data
-structure has optimal memory utilization (i.e. A 1024 bit integer takes up 128
-bytes RAM), and all memory is allocated statically: no dynamic allocation for
-better or worse. Primary goals are correctness, clarity of code and clean,
-portable implementation. Secondary goal is A memory footprint small enough to
-make it suitable for use in embedded applications. The current state is correct
-functionality and adequate performance. There may well be room for
-performance-optimizations and improvements.
-*/
-
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
