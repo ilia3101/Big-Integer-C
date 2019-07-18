@@ -596,8 +596,7 @@ int BigInt_cmp(size_t NumWords, BigInt_t * A, BigInt_t * B)
 
 int BigInt_is_zero(size_t NumWords, BigInt_t * BigInt)
 {
-    size_t i;
-    for (i = 0; i < NumWords; ++i) {
+    for (size_t i = 0; i < NumWords; ++i) {
         if (BigInt[i]) {
             return 0;
         }
