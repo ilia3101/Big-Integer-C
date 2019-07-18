@@ -4,11 +4,11 @@ Made this for one of my own projects. No dynamic memory allocation is used. Ever
 
 Based on the amazing [kokke/tiny-bignum-c](https://github.com/kokke/tiny-bignum-c), but with the following changes:
 - [Karatsuba](https://en.wikipedia.org/wiki/Karatsuba_algorithm) multiplication algorithm: **shocking** speed improvement for bigger numbers
+- Added function to convert denary strings to integers
 - No use of `sscanf` and `sprintf` for converting to and from hex
 - Size of big ints is not set at compile time, but rather passed as an argument to all functions
 - Optional use of 64 bit words: nice speed up if your CPU has 64→128 multiplications (it probably does)
 - The add, subtract and multiply functions can take differently sized inputs
-- Added function to convert denary strings to integers 
 
 If what you want is the fastest library for big numbers, look at [GNU GMP](https://gmplib.org/), but if you want to be in control of your memory, you have come to the right place.
 
