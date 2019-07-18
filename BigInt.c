@@ -1,9 +1,5 @@
-#include <stdint.h>
-#include <stddef.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <alloca.h>
 #include <string.h>
+#include <alloca.h>
 
 #include "BigInt.h"
 
@@ -462,11 +458,11 @@ void BigInt_div(size_t NumWords, BigInt_t * A, BigInt_t * B, BigInt_t * Out)
     BigInt_copy(NumWords, tmp, A); // tmp   = A
 
     const BigInt_tmp_t half_max = 1 + (BigInt_tmp_t)(MAX_VAL / 2);
-    bool overflow = false;
+    int overflow = 0;
     while (BigInt_cmp(NumWords, denom, A) != LARGER) // while (denom <= A) {
     {
         if (denom[NumWords - 1] >= half_max) {
-            overflow = true;
+            overflow = 1;
             break;
         }
         _lshift_one_bit(NumWords, current); //   current <<= 1;
